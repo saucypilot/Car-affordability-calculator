@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <link rel="stylesheet" href="CACCSS.css">
+    <script src="CACJS.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Affordability calculator</title>
-  </head>
-  <body>
+</head>
+<body>
     <h1>Car Affordability calculator</h1>
-    <form class="calculator-box">
-      <h3>How much is the car you want?</h3>
-      <input type="number" id="carCost" placeholder="$" />
-      <h3>How much do you make a year?</h3>
-      <input type="number" id="yearlyIncome" placeholder="$" />
-      <h3>How much down payment are you looking to put in?</h3>
-      <input type="number" id="downPayment" placeholder="$">
-      <h3>Are you trading in a car?</h3>
-      <input type="radio" id="yesTradeIn">
-      <label for="yesTradeIn">Yes</label>
-      <input type="radio" id="noTradeIn">
-      <label for="noTradeIn">No</label>
+    <form class="questions">
+        <label for="carCost">How much is the car you want?</label>
+        <input type="number" id="carCost" placeholder="$">
+        <label for="yearlyIncome">How much do you make a year?</label>
+        <input type="number" id="yearlyIncome" placeholder="$">
+        <div class="tradeIn">
+            <label for="tradeIn">Are you trading in a car?</label>
+                <label for="tradeInNo">No</label>
+                <input type="radio" id="tradeInNo" name="tradeIn">
+                <label for="tradeInYes">Yes</label>
+                <input type="radio" id="tradeInYes" name="tradeIn">
+            <label for="tradeInValue">How much?</label>
+            <input type="number" id="tradeInValue" placeholder="$">
+        </div>
+</input>
     </form>
-    <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos
-      alias maiores necessitatibus rerum? Veniam dignissimos dicta itaque totam
-      distinctio. Alias reprehenderit repudiandae sequi deleniti assumenda
-      deserunt saepe velit nostrum.
-    </div>
-  </body>
+    <div class="summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Perferendis quos alias maiores necessitatibus rerum? Veniam dignissimos dicta itaque totam distinctio.
+        Alias reprehenderit repudiandae sequi deleniti assumenda deserunt saepe velit nostrum.</div>
+</body>
 </html>
