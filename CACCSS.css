@@ -4,27 +4,17 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   background-color: beige;
 }
 
 h1 {
-  align-self: center;
   font-size: 3em;
 }
 
-.question {
-  margin: 5%;
-}
-
 .questions {
-  margin: 3%;
-  width: 20%;
-  align-self:center;
   display: grid;
 }
 
-.tradeIn{
-  padding: 3%;
+.question {
+  margin: 1%;
 }

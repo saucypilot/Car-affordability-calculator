@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="CaCCSS.css">
+  <head>
+    <link rel="stylesheet" href="CaCCSS.css" />
     <script src="CaCJS.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car Affordability calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Car Affordability calculator</h1>
     <form class="questions">
-        <div class="question">
-            <label for="carCost">How much is the car you want?</label>
-            <input type="number" id="carCost" placeholder="$">
-        </div>
-        <div class="question">
-            <label for="yearlyIncome">How much do you make a year?</label>
-            <input type="number" id="yearlyIncome" placeholder="$">
-        </div>
-        <div class="tradeIn" class="question">
+      <div class="question">
+        <label for="carCost">How much is the car you want?</label>
+        <input type="number" id="carCost" placeholder="$" />
+      </div>
+
+      <div class="question">
+        <label for="yearlyIncome">How much do you make a year?</label>
+        <input type="number" id="yearlyIncome" placeholder="$" />
+      </div>
+
+      <div class="tradeIn" class="question">
+        <div>
             <label for="tradeIn">Are you trading in a car?</label>
-                <label for="tradeInNo">No</label>
-                <input type="radio" id="tradeInNo" name="tradeIn">
-                <label for="tradeInYes">Yes</label>
-                <input type="radio" id="tradeInYes" name="tradeIn">
-            <label for="tradeInValue">How much?</label>
-            <input type="number" id="tradeInValue" placeholder="$">
+            <label for="tradeInNo">No</label>
+            <input type="radio" id="tradeInNo" name="tradeIn" />
+            <label for="tradeInYes">Yes</label>
+            <input type="radio" id="tradeInYes" name="tradeIn" />
         </div>
-</input>
+        
+        <div>
+            <label for="tradeInValue">How much?</label>
+            <input type="number" id="tradeInValue" placeholder="$" />
+      </div>
     </form>
-    <div class="summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Perferendis quos alias maiores necessitatibus rerum? Veniam dignissimos dicta itaque totam distinctio.
-        Alias reprehenderit repudiandae sequi deleniti assumenda deserunt saepe velit nostrum.</div>
-</body>
+
+    <div class="output">
+        <h3>Here are your results:</h3>
+    </div>
+  </body>
 </html>
