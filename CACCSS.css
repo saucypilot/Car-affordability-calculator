@@ -12,11 +12,38 @@ h1 {
   font-size: 3em;
 }
 
+hr{
+  margin: 1em;
+}
+
+/* questions section */
 .calculator{
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
+.questions{
+  border: 1px solid white;
+  display: grid;
+}
+
+.questions h2 {
+  background-color: #9da2ae;
+  padding-bottom: 1em;
+}
+
+.question div{
+  background-color: #9da2ae;
+}
+
 .question {
-  margin: 1%;
+  background-color: #9da2ae;
+  padding-bottom: 2em;
+}
+/* output section */
+.output {
+  display: grid;
+  justify-content: center;
+  background-color: #a4a3a1;
+  border: 1px solid grey;
 }
