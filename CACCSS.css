@@ -10,18 +10,18 @@ body {
 
 h1 {
   font-size: 3em;
+  text-align: center;
 }
 
 hr{
   margin: 1em;
 }
 
-/* questions section */
 .calculator{
   display: grid;
   grid-template-columns: 50% 50%;
 }
-
+/* questions section */
 .questions{
   border: 1px solid white;
   display: grid;
