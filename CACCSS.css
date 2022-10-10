@@ -6,44 +6,54 @@
 body {
   display: grid;
   justify-content: center;
+  background-image: url("https://t3.ftcdn.net/jpg/02/74/00/80/360_F_274008098_hp9JCh3EM3UctN4ihEYarXY3c6wM7A0e.jpg");
+  font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
+#websiteTitle {
   font-size: 3em;
   text-align: center;
 }
 
-hr{
+#hrUnderTitile {
   margin: 1em;
+  border-color: black;
 }
 
-.calculator{
+.calculator {
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-bottom: 5%;
 }
+
 /* questions section */
-.questions{
-  border: 1px solid white;
+.question-wrapper {
+  border: 1px solid grey;
   display: grid;
 }
 
-.questions h2 {
+.question-wrapper h2 {
   background-color: #9da2ae;
-  padding-bottom: 1em;
-}
-
-.question div{
-  background-color: #9da2ae;
+  padding: 1em;
 }
 
 .question {
   background-color: #9da2ae;
-  padding-bottom: 2em;
+  padding: 1em;
 }
+
+.question div {
+  background-color: #9da2ae;
+}
+
 /* output section */
 .output {
   display: grid;
   justify-content: center;
   background-color: #a4a3a1;
   border: 1px solid grey;
+}
+
+.output h2 {
+  padding: 1em 1em 1em 1em;
 }
