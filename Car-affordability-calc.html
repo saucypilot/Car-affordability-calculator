@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="CaCCSS.css" />
-    <script src="CaCJS.js"></script>
+    <link rel="stylesheet" href="CACCSS.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +15,12 @@
     <!-- Heading for my website -->
     <h1 id="websiteTitle">Car Affordability calculator</h1>
     <hr id="hrUnderTitile"></hr>
-    <p id="calcSummary">The typical advise for affording a car is that it should only costs 15-25% of your total income.</p>
+    <p id="calcSummary">Cars allow you to express yourself. It does more then
+      take you to point A to point B. It gives you a sense of freedom and experince while on the road.
+      It's an extension of yourself. But alot of cars don't come cheap, expecially in this day and age.
+      How do you know if you can afford a car that has your eyes? Just enter the information below and
+      you'll know if you can afford it or not.</p>
+    
     <!-- Calculator section -->
     <div class="calculator">
       <!-- Section for user inputs -->
@@ -38,12 +42,19 @@
           <label for="insurance">How much is the estimated insurance cost?</label>
           <input id="insurance" placeholder="$">
         </div>
+        <div class="button-wrapper">
+          <button id="calculate" type="button">Calculate</button>
+        </div>
       </form>
       <!-- Section for results -->
       <div class="output">
           <h2>Here are your results:</h2>
-          <p>20% of your income is:</p>
+          <p>
+            20% of your yearly income is: <span id="twentyPercent"></span>
+          </p>
+          <p>With a trade in, your car cost: </p>
       </div>
     </div>
+    <script src="CaCJS.js"></script>
   </body>
 </html>
