@@ -3,12 +3,13 @@ document.getElementById("calculate").onclick = calculate;
 function calculate() {
   // Get the values from the processInputValues() function
   var { carCost, yearlyIncome, tradeIn, insurance } = processInputValues();
+  // Calculate the total cost of the car
+  var carCostWithInsurance = carCost + insurance;
   // Calculate 20% on yearly income
   var TwentyPerOfIncome = yearlyIncome * 0.2;
-  // Get the element where we want to display the result
-  var TwentyPerOfIncome_Output = document.getElementById("twentyPercent");
-  // Displays the result
-  TwentyPerOfIncome_Output.innerText = TwentyPerOfIncome;
+
+  document.getElementById("carCostWithInsurance").innerText = carCostWithInsurance;
+  document.getElementById("twentyPercent").innerText = TwentyPerOfIncome;
 }
 
 function processInputValues() {
@@ -22,7 +23,7 @@ function processInputValues() {
   yearlyIncome = yearlyIncome.replace(/[^0-9]/g, "");
   tradeIn = tradeIn.replace(/[^0-9]/g, "");
   insurance = insurance.replace(/[^0-9]/g, "");
-  // convert all the values to ints
+  // convert all the values to integers
   carCost = parseInt(carCost);
   yearlyIncome = parseInt(yearlyIncome);
   tradeIn = parseInt(tradeIn);

@@ -28,11 +28,11 @@
         <h2>Enter your information here to make the calculations:</h2>
         <div class="question">
           <label for="carCost">How much is the car you want?</label>
-          <input id="carCost" placeholder="$" pattern="[0-9]*"/> <!-- the pattern attribute is used to validate the input for numbers only -->
+          <input id="carCost" placeholder="$" pattern="[0-9]*" required> <!-- the pattern attribute is used to validate the input for numbers only -->
         </div>
         <div class="question">
           <label for="yearlyIncome">How much do you make a year?</label>
-          <input id="yearlyIncome" placeholder="$" pattern="[0-9]*"/>
+          <input id="yearlyIncome" placeholder="$" pattern="[0-9]*" required>
         </div>
         <div class="question">
           <label for="tradeIn">How much are you trading in? (Optional)</label>
@@ -40,7 +40,7 @@
         </div>
         <div class="question">
           <label for="insurance">How much is the estimated insurance cost?</label>
-          <input id="insurance" placeholder="$" pattern="[0-9]*">
+          <input id="insurance" placeholder="$" pattern="[0-9]*" required>
         </div>
         <div class="button-wrapper">
           <button id="calculate" type="button"></button>
@@ -52,7 +52,8 @@
           <p>
             20% of your yearly income is: <span id="twentyPercent"></span>
           </p>
-          <p>With a trade in, your car cost: </p>
+          <p>The total cost of the car with insurance is: <span id="carCostWithInsurance"></span>
+          </p>
       </div>
     </div>
     <script src="CaCJS.js"></script>
