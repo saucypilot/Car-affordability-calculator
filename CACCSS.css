@@ -113,11 +113,20 @@ output section
 */
 .output {
   display: grid;
-  justify-content: center;
   background-color: rgb(164, 163, 161, 70%);
+  padding: 1em;
   border: 1px solid grey;
+  align-content: flex-start;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1em;
+  margin-bottom: 1em;
 }
 
 .output h2 {
   padding: 1em 1em 1em 1em;
+  text-align: center;
 }
