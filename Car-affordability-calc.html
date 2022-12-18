@@ -15,32 +15,37 @@
     <!-- Heading for my website -->
     <h1 id="websiteTitle">Car Affordability calculator</h1>
     <hr id="hrUnderTitile"></hr>
-    <p id="calcSummary">Cars allow you to express yourself. It does more then
-      take you to point A to point B. It gives you a sense of freedom and experince while on the road.
-      It's an extension of yourself. But alot of cars don't come cheap, expecially in this day and age.
-      How do you know if you can afford a car that has your eyes? Just enter the information below and
-      you'll know if you can afford it or not.</p>
+    <p id="calcSummary">Put at least 20% down. This can include any equity you have in your old car. Just don't finance more than 80% of the new vehicle. Never finance for more than 4 years. 
+      You want the monthly payment to be no more than 10% of your take-home pay, that includes gas and maintaince.</p>
     
     <!-- Calculator section -->
     <div class="calculator">
       <!-- Section for user inputs -->
       <form class="question-wrapper">
         <h2>Enter your information here to make the calculations:</h2>
-        <div class="question">  
-          <label for="monthlyPayment">How much do you expect on a monthly payment?</label>
-          <input id="monthlyPayment" placeholder="$" pattern="[0-9]*" required> <!-- the pattern attribute is used to validate the input for numbers only -->
-        </div>
         <div class="question">
-          <label for="yearlyIncome">How much do you make a year?</label>
+          <label for="yearlyIncome">Your yearly income?</label>
           <input id="yearlyIncome" placeholder="$" pattern="[0-9]*" required>
         </div>
+        <div class="question">  
+          <label for="carCost">How much is the car you want?</label>
+          <input id="carCost" placeholder="$" pattern="[0-9]*" required> <!-- the pattern attribute is used to validate the input for numbers only -->
+        </div>
         <div class="question">
-          <label for="tradeIn">How much are you trading in? (Optional)</label>
+          <label for="tradeIn">How much are you trading in?</label>
           <input id="tradeIn" placeholder="$" pattern="[0-9]*">
         </div>
         <div class="question">
-          <label for="insurance">How much is the estimated insurance cost?</label>
-          <input id="insurance" placeholder="$" pattern="[0-9]*" required>
+          <label for="downPayment">How much down payment are you planning to put in?</label>
+          <input id="downPayment" placeholder="$" pattern="[0-9]*" required>
+        </div>
+        <div class="question">
+          <label for="creditScore">Your credit score:</label>
+          <input id="creditScore" type="text" pattern="[0-9]*" required>
+        </div>
+        <div class="question">
+          <label for="loan">How many months for you loan?</label>
+          <input id="loan" type="text" pattern="[0-9]*" required>
         </div>
         <div class="button-wrapper">
           <button id="calculate" type="button"></button>
@@ -52,7 +57,9 @@
           <p class="results">
             20% of your yearly income is: <span id="twentyPercent"></span>
           </p>
-          <p class="results">The total cost of the car with insurance is: <span id="monthlyPaymentWithInsurance"></span>
+          <p class="results">Your montly payment: <span id=""></span>
+          </p>
+          <p class="results">Your credit score range: <span id=""></span>
           </p>
       </div>
     </div>
