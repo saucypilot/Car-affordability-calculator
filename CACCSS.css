@@ -12,7 +12,7 @@ body {
 
 .background-image{
   position: absolute;
-  background: url("52a68d6f409d6761357a41320da4dcba.jpg") no-repeat center center fixed;
+  background: url("bmwBackgroundPic.jpg") no-repeat center center fixed;
   height: 100vh;
   width: 100vw;
   z-index: -1;

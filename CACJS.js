@@ -1,72 +1,60 @@
-document.getElementById("calculate").onclick = calculate;
-
-// make variables for credit score ranges
-var excellent = creditScore >= 800
-var veryGood = creditScore >= 740 && creditScore < 800;
-var good = creditScore >= 670 && creditScore < 740;
-var fair = creditScore >= 580 && creditScore < 670;
-var poor = creditScore >= 0 && creditScore < 580;
-
-function processInputValues() {
+document.getElementById("calculate").onclick = function () {
   // Get the values from the input fields
   var carCost = document.getElementById("carCost").value;
   var yearlyIncome = document.getElementById("yearlyIncome").value;
   var tradeIn = document.getElementById("tradeIn").value;
   var downPayment = document.getElementById("downPayment").value;
-  var creditScore = document.getElementById("creditScoreRange").value;
+  var creditScore = document.getElementById("creditScore").value;
   var loan = document.getElementById("loan").value;
-  return { carCost, yearlyIncome, tradeIn, downPayment, creditScore, loan };
-}
 
-function removeUnwantedStrings( carCost, yearlyIncome, tradeIn, downPayment, creditScore, loan){
+  // Remove any non-numeric characters from the input values
   carCost = carCost.replace(/[^0-9]/g, "");
   yearlyIncome = yearlyIncome.replace(/[^0-9]/g, "");
   tradeIn = tradeIn.replace(/[^0-9]/g, "");
   downPayment = downPayment.replace(/[^0-9]/g, "");
   creditScore = creditScore.replace(/[^0-9]/g, "");
   loan = loan.replace(/[^0-9]/g, "");
-  return { carCost, yearlyIncome, tradeIn, downPayment, creditScore, loan };
-}
 
-function convertToNumbers(carCost, yearlyIncome, tradeIn, downPayment, creditScore, loan){
-  // convert all the values to integers
+  // Convert the input values to integers
   carCost = parseInt(carCost);
   yearlyIncome = parseInt(yearlyIncome);
   tradeIn = parseInt(tradeIn);
   downPayment = parseInt(downPayment);
   creditScore = parseInt(creditScore);
   loan = parseInt(loan);
-  return { carCost, yearlyIncome, tradeIn, downPayment, creditScore, loan };
-}
 
-function calculate() {
-  // Get the values from the processInputValues() function
-  var { carCost, yearlyIncome, tradeIn, downPayment } = processInputValues();
   // Calculate 20% on yearly income
-  TwentyPerOfIncome = yearlyIncome * 0.2;
-  // Calculate the total cost of the car
+  var twentyPercentOfIncome = yearlyIncome * 0.2;
+
+  // Calculate the total cost of the car  
   carCost = carCost - tradeIn - downPayment;
+
   // Calculate the interest rate
   var interestRate = 0;
-  if (excellent) {
+  var creditScoreRange = "";
+  if (creditScore >= 800) {
     interestRate = 0.05;
-  } else if (veryGood) {
+    creditScoreRange = "Excellent";
+  } else if (creditScore >= 740 && creditScore < 800) {
     interestRate = 0.07;
-  } else if (good) {
+    creditScoreRange = "Very Good";
+  } else if (creditScore >= 670 && creditScore < 740) {
     interestRate = 0.09;
-  } else if (fair) {
+    creditScoreRange = "Good";
+  } else if (creditScore >= 580 && creditScore < 670) {
     interestRate = 0.11;
-  } else if (poor) {
+    creditScoreRange = "Fair";
+  } else if (creditScore >= 0 && creditScore < 580) {
     interestRate = 0.13;
+    creditScoreRange = "Poor";
   }
+
   // Calculate the monthly payment
   var monthlyPayment = (carCost * interestRate) / (1 - Math.pow(1 + interestRate, -loan));
-  // Call the displayResults function, passing in the values to display
-  displayResults(TwentyPerOfIncome, monthlyPayment, creditScoreRange);
-}
+  monthlyPayment = monthlyPayment.toFixed(2);
 
-function displayResults(TwentyPerOfIncome, monthlyPayment, creditScoreRange) {
-document.getElementById("twentyPercent").innerText = TwentyPerOfIncome;
-document.getElementById("creditScore").innerText = creditScoreRange;
-document.getElementById("monthlyPayment").innerText = monthlyPayment;
-}
+  // Update the HTML elements with the calculated values
+  document.getElementById("twentyPercentOfIncome").innerHTML = twentyPercentOfIncome;
+  document.getElementById("monthlyPayment").innerHTML = monthlyPayment;
+  document.getElementById("creditScoreRange").innerHTML = creditScoreRange;
+};
