@@ -5,7 +5,7 @@ document.getElementById("calculate").onclick = function () {
   var tradeIn = document.getElementById("tradeIn").value;
   var downPayment = document.getElementById("downPayment").value;
   var creditScore = document.getElementById("creditScore").value;
-  var loan = document.getElementById("loan").value;
+  var loanTerm = document.getElementById("loanTerm").value;
 
   // Remove any non-numeric characters from the input values
   carCost = carCost.replace(/[^0-9]/g, "");
@@ -13,7 +13,7 @@ document.getElementById("calculate").onclick = function () {
   tradeIn = tradeIn.replace(/[^0-9]/g, "");
   downPayment = downPayment.replace(/[^0-9]/g, "");
   creditScore = creditScore.replace(/[^0-9]/g, "");
-  loan = loan.replace(/[^0-9]/g, "");
+  loanTerm = loanTerm.replace(/[^0-9]/g, "");
 
   // Convert the input values to integers
   carCost = parseInt(carCost);
@@ -21,7 +21,12 @@ document.getElementById("calculate").onclick = function () {
   tradeIn = parseInt(tradeIn);
   downPayment = parseInt(downPayment);
   creditScore = parseInt(creditScore);
-  loan = parseInt(loan);
+  loanTerm = parseInt(loanTerm);
+
+  // Automatically assign zero to downPayment if it is empty
+  if (downPayment == "") {
+    downPayment = 0;
+  }
 
   // Calculate 20% on yearly income
   var twentyPercentOfIncome = yearlyIncome * 0.2;
@@ -33,7 +38,7 @@ document.getElementById("calculate").onclick = function () {
   var interestRate = 0;
   var creditScoreRange = "";
   if (creditScore >= 800) {
-    interestRate = 0.05;
+    interestRate = 0.04;
     creditScoreRange = "Excellent";
   } else if (creditScore >= 740 && creditScore < 800) {
     interestRate = 0.07;
@@ -50,7 +55,7 @@ document.getElementById("calculate").onclick = function () {
   }
 
   // Calculate the monthly payment
-  var monthlyPayment = (carCost * interestRate) / (1 - Math.pow(1 + interestRate, -loan));
+  var monthlyPayment = carCost * (interestRate/12) / (1 - Math.pow(1 + interestRate/12, -loanTerm)); 
   monthlyPayment = monthlyPayment.toFixed(2);
 
   // Update the HTML elements with the calculated values
