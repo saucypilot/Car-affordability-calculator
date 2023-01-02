@@ -130,3 +130,8 @@ output section
   padding: 1em 1em 1em 1em;
   text-align: center;
 }
+
+#isMonthlyPaymentInRange {
+  /* make text bigger then the rest */
+  font-size: 1.5em;
+}

@@ -55,8 +55,17 @@ document.getElementById("calculate").onclick = function () {
   }
 
   // Calculate the monthly payment
-  var monthlyPayment = carCost * (interestRate/12) / (1 - Math.pow(1 + interestRate/12, -loanTerm)); 
+  var monthlyPayment = carCost * (interestRate / 12) / (1 - Math.pow(1 + interestRate / 12, -loanTerm));
   monthlyPayment = monthlyPayment.toFixed(2);
+
+  // See's if the monthly payment is greater than 20% of income
+  var isMonthlyPaymentInRange = document.getElementById("isMonthlyPaymentInRange");
+  var monthlySalary = yearlyIncome / 12;
+  if (monthlyPayment > monthlySalary * 0.2) {
+    isMonthlyPaymentInRange.innerHTML = "Your monthly payment is too high. You can't afford this car.";
+  } else {
+    isMonthlyPaymentInRange.innerHTML = "You can afford this car.";
+  }
 
   // Update the HTML elements with the calculated values
   document.getElementById("twentyPercentOfIncome").innerHTML = twentyPercentOfIncome;
