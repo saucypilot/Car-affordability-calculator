@@ -62,13 +62,15 @@ document.getElementById("calculate").onclick = function () {
   var isMonthlyPaymentInRange = document.getElementById("isMonthlyPaymentInRange");
   var monthlySalary = yearlyIncome / 12;
   if (monthlyPayment > monthlySalary * 0.2) {
-    isMonthlyPaymentInRange.innerHTML = "Your monthly payment is too high. You can't afford this car.";
+    isMonthlyPaymentInRange.innerHTML = "Your monthly payment is too high. You can't afford this car unfortunately.";
   } else {
-    isMonthlyPaymentInRange.innerHTML = "You can afford this car.";
+    isMonthlyPaymentInRange.innerHTML = "Looks like you can afford this car. Congratulations!";
   }
 
   // Update the HTML elements with the calculated values
   document.getElementById("twentyPercentOfIncome").innerHTML = twentyPercentOfIncome;
-  document.getElementById("monthlyPayment").innerHTML = monthlyPayment;
   document.getElementById("creditScoreRange").innerHTML = creditScoreRange;
+  document.getElementById("interestRate").innerHTML = interestRate;
+  document.getElementById("monthlyPayment").innerHTML = monthlyPayment;
+  document.getElementById("isMonthlyPaymentInRange").style.display = "block";
 };

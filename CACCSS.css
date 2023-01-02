@@ -80,16 +80,17 @@ questions section
   background-color: #9da2ae;
 }
 
+/*
+-----------------
+button section
+*/
 .button-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
 }
-/*
------------------
-button section
-*/
+
 button:before {
   content: "Calculate";
   color: white;
@@ -124,6 +125,9 @@ output section
   grid-template-columns: 50% 50%;
   grid-gap: 1em;
   margin-bottom: 1em;
+  background-color: #9da2ae;
+  padding: 1em;
+  border-radius: .5em;
 }
 
 .output h2 {
@@ -131,7 +135,10 @@ output section
   text-align: center;
 }
 
+/* Makes #isMonthlyPaymentInRange only appear after the calculaton is performed. */
 #isMonthlyPaymentInRange {
-  /* make text bigger then the rest */
+  display: none;
   font-size: 1.5em;
+  text-align: center;
+  margin: 1em;
 }

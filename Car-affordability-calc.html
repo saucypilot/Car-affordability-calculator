@@ -17,6 +17,9 @@
   <!-- Heading for my website -->
   <h1 id="websiteTitle">Car Affordability calculator</h1>
   <hr id="hrUnderTitile">
+  <p id="calcSummary">You're monthly papment should not be over 20%. Use this calculator to determine whether your income
+    is sufficient to afford a car. Just enter values into the left side of the calculator.</p>
+  </p>
   <div class="calculator">
     <!-- Section for user inputs -->
     <form class="question-wrapper">
@@ -53,14 +56,16 @@
     <!-- Section for results -->
     <div class="output">
       <h2>Here are your results:</h2>
-      <p class="results" id="isMonthlyPaymentInRange"></p>
       <p class="results">
         20% of your yearly income is: <span id="twentyPercentOfIncome"></span>
       </p>
       <p class="results">Your credit score range: <span id="creditScoreRange"></span>
       </p>
+      <p class="results">Interest rate: <span id="interestRate"></span>
+      </p>
       <p class="results">Montly payment: <span id="monthlyPayment"></span>
       </p>
+      <p class="results" id="isMonthlyPaymentInRange"></p>
     </div>
   </div>
   <script src="CACJS.js"></script>
