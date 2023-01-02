@@ -53,9 +53,10 @@ Top section for my website
 questions section
 */
 .question-wrapper {
-  border: 1px solid grey;
   background-color: rgb(157, 162, 174, 70%);
   display: grid;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
 }
 
 .question-wrapper h2 {
@@ -97,6 +98,10 @@ button:before {
   font-size: 1.3em;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
+
 #calculate {
   display: inline-block;
   width: 50%;
@@ -118,6 +123,8 @@ output section
   padding: 1em;
   border: 1px solid grey;
   align-content: flex-start;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
 }
 
 .results {
@@ -128,6 +135,7 @@ output section
   background-color: #9da2ae;
   padding: 1em;
   border-radius: .5em;
+  border: 1px solid grey;
 }
 
 .output h2 {
