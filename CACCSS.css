@@ -48,6 +48,21 @@ Top section for my website
   margin-bottom: 5%;
 }
 
+@media screen and (max-width: 800px) {
+  .calculator {
+    grid-template-columns: 100%;
+  }
+  /* make the background picture behave to be like a sticky element when scrolling down */
+  .background-image {
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(3px);
+  }
+}
+
 /*
 --------------------
 questions section
