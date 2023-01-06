@@ -68,9 +68,9 @@ document.getElementById("calculate").onclick = function () {
   }
 
   // Update the HTML elements with the calculated values
-  document.getElementById("twentyPercentOfIncome").innerHTML = twentyPercentOfIncome;
+  document.getElementById("twentyPercentOfIncome").innerHTML = "$" + twentyPercentOfIncome;
   document.getElementById("creditScoreRange").innerHTML = creditScoreRange;
   document.getElementById("interestRate").innerHTML = interestRate;
-  document.getElementById("monthlyPayment").innerHTML = monthlyPayment;
+  document.getElementById("monthlyPayment").innerHTML = "$" + monthlyPayment;
   document.getElementById("isMonthlyPaymentInRange").style.display = "block";
 };
