@@ -7,6 +7,11 @@ document.getElementById("calculate").onclick = function () {
   var creditScore = document.getElementById("creditScore").value;
   var loanTerm = document.getElementById("loanTerm").value;
 
+  if (carCost === "" || yearlyIncome === "" || tradeIn === "" || downPayment === "" || creditScore === "" || loanTerm === "") {
+    alert("Please enter all the answers for each question.");
+    return;
+  }
+
   // Remove any non-numeric characters from the input values
   carCost = carCost.replace(/[^0-9]/g, "");
   yearlyIncome = yearlyIncome.replace(/[^0-9]/g, "");
