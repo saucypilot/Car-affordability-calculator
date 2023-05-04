@@ -179,10 +179,11 @@ output section
   grid-template-columns: 50% 50%;
   grid-gap: 1em;
   margin-bottom: 1em;
-  background-color: #9da2ae;
   padding: 1em;
-  border-radius: .5em;
-  border: 1px solid grey;
+}
+
+.isMonthlyPaymentInRange {
+  display: none;
 }
 
 .output h2 {
