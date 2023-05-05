@@ -68,12 +68,8 @@ document.getElementById("calculate").onclick = function () {
   var monthlySalary = yearlyIncome / 12;
   if (monthlyPayment > monthlySalary * 0.2) {
     isMonthlyPaymentInRange.innerHTML = "Your monthly payment is too high. You can't afford this car unfortunately.";
-    isMonthlyPaymentInRange.style.display = "block"; // show the element
-    isMonthlyPaymentInRange.style.color = "red"; // set the color to red
   } else {
     isMonthlyPaymentInRange.innerHTML = "Looks like you can afford this car. Congratulations!";
-    isMonthlyPaymentInRange.style.display = "block"; // show the element
-    isMonthlyPaymentInRange.style.color = "green"; // set the color to green
   }
 
   // Update the HTML elements with the calculated values

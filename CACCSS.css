@@ -100,7 +100,7 @@ Wrapper for the calculator
 questions section
 */
 .question-wrapper {
-  background-color: rgb(157, 162, 174, 70%);
+  background-color: #d74e4eb3;
   display: grid;
   border-top-left-radius: .5em;
   border-bottom-left-radius: .5em;
@@ -174,6 +174,11 @@ output section
   border-bottom-right-radius: .5em;
 }
 
+.output h2 {
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+}
+
 .results {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -186,15 +191,6 @@ output section
   display: none;
 }
 
-.output h2 {
-  padding: 1em 1em 1em 1em;
-  text-align: center;
-}
-
-/* Makes #isMonthlyPaymentInRange only appear after the calculaton is performed. */
 #isMonthlyPaymentInRange {
-  display: none;
-  font-size: 1.5em;
-  text-align: center;
-  margin: 1em;
+  align-self: center;
 }
