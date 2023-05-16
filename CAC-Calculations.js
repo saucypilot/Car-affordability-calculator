@@ -1,3 +1,7 @@
+// Export the variables to the CAC-Display-elements.js file
+export { twentyPercentOfIncome, creditScoreRange, interestRate, monthlyPayment, isMonthlyPaymentInRange };
+
+// Get the values from the input fields when user clicks on the "Calculate" button
 document.getElementById("calculate").onclick = function () {
   // Get the values from the input fields
   var carCost = document.getElementById("carCost").value;
@@ -62,20 +66,4 @@ document.getElementById("calculate").onclick = function () {
   // Calculate the monthly payment
   var monthlyPayment = carCost * (interestRate / 12) / (1 - Math.pow(1 + interestRate / 12, -loanTerm));
   monthlyPayment = monthlyPayment.toFixed(2);
-
-  // See's if the monthly payment is greater than 20% of income
-  var isMonthlyPaymentInRange = document.getElementById("isMonthlyPaymentInRange");
-  var monthlySalary = yearlyIncome / 12;
-  if (monthlyPayment > monthlySalary * 0.2) {
-    isMonthlyPaymentInRange.innerHTML = "Your monthly payment is too high. You can't afford this car unfortunately.";
-  } else {
-    isMonthlyPaymentInRange.innerHTML = "Looks like you can afford this car. Congratulations!";
-  }
-
-  // Update the HTML elements with the calculated values
-  document.getElementById("twentyPercentOfIncome").innerHTML = "$" + twentyPercentOfIncome;
-  document.getElementById("creditScoreRange").innerHTML = creditScoreRange;
-  document.getElementById("interestRate").innerHTML = interestRate;
-  document.getElementById("monthlyPayment").innerHTML = "$" + monthlyPayment;
-  document.getElementById("isMonthlyPaymentInRange").style.display = "block";
-};  
+};
