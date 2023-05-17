@@ -95,7 +95,7 @@
   output section
   */
   .output {
-    display: grid; /* Turns into grid when user completes the input */
+    display: none; /* Turns into grid when user completes the input */
     background-color: rgb(164, 163, 161, 70%);
     padding: 1em;
     border: 1px solid grey;
@@ -104,7 +104,7 @@
     border-bottom-right-radius: .5em;
   }
   
-  .output h2 {
+  #output h2 {
     padding: 1em 1em 1em 1em;
     text-align: center;
   }
