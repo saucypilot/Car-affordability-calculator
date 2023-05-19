@@ -1,6 +1,6 @@
 const calculateButton = document.querySelector('#calculate');
-const calculator = document.querySelector('.calculator');
-const questions = document.querySelector('.question-wrapper');
+const outputElement = document.querySelector('#output');
+const questions = document.querySelector('#question-wrapper');
 
 // Get the values from the input fields when user clicks on the "Calculate" button
 calculateButton.addEventListener('click', () => {
@@ -84,7 +84,9 @@ calculateButton.addEventListener('click', () => {
   isMonthlyPaymentInRange.innerHTML = "Looks like you can afford this car. Congratulations!";
   }
 
-  // Hide the calculator and show the results
-  calculator.style.display = 'none';
-  questions.style.display = 'grid';
+  // Replace questionWrapperElement with outputElement
+  questions.replaceWith(outputElement);
+
+  // Set the display of `outputElement` to `grid`
+  outputElement.style.display = "grid";
 });
