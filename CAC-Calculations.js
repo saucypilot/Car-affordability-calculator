@@ -1,6 +1,26 @@
-const calculateButton = document.querySelector('#calculate');
+const calculateButton = document.querySelector('#calculate-button');
 const outputElement = document.querySelector('#output');
 const questions = document.querySelector('#question-wrapper');
+
+// Custom alert function
+function customAlert(message) {
+  // Get the custom alert box and message elements
+  var customAlertBox = document.getElementById("custom-alert-box");
+  var customAlertMessage = document.getElementById("custom-alert-message");
+
+  // Set the message text
+  customAlertMessage.innerHTML = message;
+
+  // Show the custom alert box
+  customAlertBox.style.display = "block";
+
+  // Add event listener to the okay button
+  var customAlertOkayButton = document.getElementById("custom-alert-okay-button");
+  customAlertOkayButton.addEventListener("click", function() {
+    // Hide the custom alert box
+    customAlertBox.style.display = "none";
+  });
+}
 
 // Get the values from the input fields when user clicks on the "Calculate" button
 calculateButton.addEventListener('click', () => {
@@ -12,9 +32,10 @@ calculateButton.addEventListener('click', () => {
   var creditScore = document.getElementById("creditScore").value;
   var loanTerm = document.getElementById("loanTerm").value;
 
+  // Check if any of the input fields are empty
   if (carCost === "" || yearlyIncome === "" || tradeIn === "" || downPayment === "" || creditScore === "" || loanTerm === "") {
-    alert("Please enter all the answers for each question.");
-    //document.getElementById("alert").style.display = "block";
+    // Call the customAlert function with the message
+    customAlert("Please enter all the answers for each question.");
     return;
   }
 

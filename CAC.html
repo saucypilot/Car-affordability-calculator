@@ -14,7 +14,6 @@
   </head>
 
   <body>
-    <div id="alert">Please enter all the answers for each question.</div>
     <div class="background-image"></div>
     <!-- Heading for my website -->
     <nav>
@@ -29,6 +28,12 @@
     <p id="calcSummary">You're monthly papment should not be over 20%. Use this calculator to determine whether your income
       is sufficient to afford a car. Just enter values into the left side of the calculator.</p>
     </p>
+    <!-- HTML for custom alert box -->
+    <div id="custom-alert-box">
+      <div id="custom-alert-message"></div>
+      <button id="custom-alert-okay-button">Okay</button>
+    </div>
+    <!-- HTML for calculator -->
     <div class="calculator">
       <!-- Section for user inputs -->
       <form id="question-wrapper">
@@ -59,7 +64,7 @@
           <input id="loanTerm" pattern="[0-9]*" required>
         </div>
         <div class="button-wrapper">
-          <button id="calculate" type="button"></button>
+          <button id="calculate-button" type="button"></button>
         </div>
       </form>
       <!-- Section for results -->

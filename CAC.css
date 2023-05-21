@@ -20,24 +20,50 @@ body {
   opacity: 0.3;
 }
 
-#alert{
+/*
+----------------------------
+Alert element
+----------------------------
+*/
+
+#custom-alert-box {
   display: none;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 3em;
-  background-color: #d74e4e;
-  color: white;
-  font-size: 1.5em;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
 }
+
+#custom-alert-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#custom-alert-okay-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#custom-alert-okay-button:hover {
+  background-color: #0069d9;
+}
+
 
 /* 
 ----------------------------
 Top section for my website
+----------------------------
 */
 
 nav{
@@ -68,7 +94,9 @@ li:hover{
   color: #d74e4e;
 }
 /* 
+----------------------------
 Website title
+----------------------------
 */
 #websiteTitle {
   font-size: 3em;
