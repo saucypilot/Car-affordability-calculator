@@ -14,6 +14,7 @@ calculateButton.addEventListener('click', () => {
 
   if (carCost === "" || yearlyIncome === "" || tradeIn === "" || downPayment === "" || creditScore === "" || loanTerm === "") {
     alert("Please enter all the answers for each question.");
+    //document.getElementById("alert").style.display = "block";
     return;
   }
 
