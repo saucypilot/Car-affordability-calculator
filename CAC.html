@@ -40,20 +40,19 @@
         <h2>Enter your information here to make the calculations:</h2>
         <div class="question">
           <label for="yearlyIncome">Your yearly income?</label>
-          <input id="yearlyIncome" placeholder="$" pattern="[0-9]*" required>
+          <input class="dollar-input" id="yearlyIncome" placeholder="$" pattern="[0-9]*" required>
         </div>
         <div class="question">
           <label for="carCost">How much is the car you want?</label>
-          <input id="carCost" placeholder="$" pattern="[0-9]*" required>
-          <!-- the pattern attribute is used to validate the input for numbers only -->
+          <input class="dollar-input" id="carCost" placeholder="$" pattern="[0-9]*" required>
         </div>
         <div class="question">
           <label for="tradeIn">How much are you trading in?</label>
-          <input id="tradeIn" placeholder="$" pattern="[0-9]*">
+          <input class="dollar-input" id="tradeIn" placeholder="$" pattern="[0-9]*" required>
         </div>
         <div class="question">
           <label for="downPayment">How much down payment are you planning to put in?</label>
-          <input id="downPayment" placeholder="$" pattern="[0-9]*" required>
+          <input class="dollar-input" id="downPayment" placeholder="$" pattern="[0-9]*" required>
         </div>
         <div class="question">
           <label for="creditScore">Your credit score:</label>

@@ -2,6 +2,22 @@ const calculateButton = document.querySelector('#calculate-button');
 const outputElement = document.querySelector('#output');
 const questions = document.querySelector('#question-wrapper');
 
+// Add a dollar sign to the input fields
+const inputElements = document.querySelectorAll(".dollar-input");
+
+inputElements.forEach((inputElement) => {
+  inputElement.addEventListener("input", (event) => {
+    const value = event.target.value;
+    const numericValue = parseInt(value.replace(/[^0-9]/g, ""));
+    if (!isNaN(numericValue)) {
+      event.target.value = "$" + numericValue;
+    } else {
+      event.target.value = "";
+    }
+  });
+});
+
+
 // Custom alert function
 function customAlert(message) {
   // Get the custom alert box and message elements
