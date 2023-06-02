@@ -26,8 +26,7 @@
 #question-wrapper {
   background-color: #d74e4eb3;
   display: grid;
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
+  border-radius: 0.5em;
 }
 
 #question-wrapper h2 {

@@ -28,7 +28,7 @@ function customAlert(message) {
   customAlertMessage.innerHTML = message;
 
   // Show the custom alert box
-  customAlertBox.style.display = "block";
+  customAlertBox.style.display = "flex";
 
   // Add event listener to the okay button
   var customAlertOkayButton = document.getElementById("custom-alert-okay-button");
@@ -37,6 +37,24 @@ function customAlert(message) {
     customAlertBox.style.display = "none";
   });
 }
+
+// Add event listeners to restrict input to numeric values for credit score and loan term
+const creditScoreInput = document.getElementById("creditScore");
+const loanTermInput = document.getElementById("loanTerm");
+
+creditScoreInput.addEventListener("input", (event) => {
+  const value = event.target.value;
+  event.target.value = value.replace(/[^0-9]/g, "");
+});
+
+loanTermInput.addEventListener("input", (event) => {
+  const value = event.target.value;
+  event.target.value = value.replace(/[^0-9]/g, "");
+});
+
+/* 
+--------------------------------------------------
+*/
 
 // Get the values from the input fields when user clicks on the "Calculate" button
 calculateButton.addEventListener('click', () => {
