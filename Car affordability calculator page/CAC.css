@@ -20,6 +20,14 @@ body {
   opacity: 0.3;
 }
 
+a {
+  color: inherit;
+  text-decoration: none; 
+  background-color: transparent; 
+  border: none; 
+  outline: none;
+}
+
 /*
 ----------------------------
 Alert element
