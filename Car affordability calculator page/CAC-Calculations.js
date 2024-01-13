@@ -146,3 +146,4 @@ calculateButton.addEventListener('click', () => {
   // Set the display of `outputElement` to `grid`
   outputElement.style.display = "grid";
 });
+

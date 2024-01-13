@@ -42,12 +42,15 @@
 }
 
 .question {
-  background-color: #d74e4eb3;
   border-radius: 0.5em;
   padding: 1em;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   grid-template-columns: 85%;
 }
+
 
 .question div {
   background-color: #9da2ae;
