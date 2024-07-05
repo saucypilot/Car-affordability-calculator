@@ -1,7 +1,6 @@
 import React from "react";
-import Background from "../../components/background";
-import Calculator from "../../components/calculator";
-import { metadata } from "./layout";
+import Background from "../../components/background.server";
+import Calculator from "../../components/calculator.client";
 
 export default function Page() {
   return (
