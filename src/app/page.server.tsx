@@ -3,11 +3,9 @@ import Calculator from "../components/calculator.client";
 
 export default function Page() {
   return (
-    <html lang="en">
-      <body>
-        <h1>Car affordability calculator</h1>
-        <Calculator />
-      </body>
-    </html>
+    <div>
+      <h1>Car affordability calculator</h1>
+      <Calculator />
+    </div>
   );
 }
