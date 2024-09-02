@@ -9,7 +9,7 @@ function Calculator() {
   const [results, setResults] = useState({ monthlyPayment: 0 });
 
   return (
-    <div>
+    <div className={styles.divCalculator}>
       <Questions updateResults={setResults} />
       <Results {...results} />
     </div>
