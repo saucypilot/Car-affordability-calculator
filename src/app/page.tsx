@@ -1,11 +1,11 @@
 import React from "react";
-import Calculator from "../components/calculator.client";
+import Calculator from "../components/calculator";
 
 export default function Page() {
   return (
-    <div>
+    <body>
       <h1>Car affordability calculator</h1>
       <Calculator />
-    </div>
+    </body>
   );
 }

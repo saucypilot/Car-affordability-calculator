@@ -8,9 +8,9 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <div>
+    <html>
       {children}
-    </div>
+    </html>
   );
 };
 
