@@ -4,7 +4,6 @@
   <head>
     <link rel="stylesheet" href="CAC.css" />
     <link rel="stylesheet" href="CAC-Calculator-UI.css"/>
-    <link rel="stylesheet" href="../HeaderAndBackground.css"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,13 +16,8 @@
   <body>
     <div class="background-image"></div>
     <!-- Heading and background for my website -->
-    <nav>
-      <ul>
-        <li><a href="../Car finder page/CarFinder.html">Car finder</a></li>
-      </ul>
-    </nav>
     <h1 id="websiteTitle">Car Affordability calculator</h1>
-    <hr id="hrUnderTitile">
+    <hr id="hrUnderTitle">
     <p id="calcSummary">You're monthly payment should not be over 20%. Use this calculator to determine whether your income
       is sufficient to afford a car. Just enter values into the left side of the calculator.</p>
     <!-- HTML for custom alert box -->
@@ -80,6 +74,6 @@
         </p>
       </div>
     </div>
-    <script src="CAC-Calculations.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
