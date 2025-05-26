@@ -1,0 +1,28 @@
+#output {
+  display: grid;
+  background-color: rgb(164, 163, 161, 70%);
+  padding: 1em;
+  align-content: flex-start;
+  border-radius: 1em;
+}
+
+#output h2 {
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.isMonthlyPaymentInRange {
+  display: none;
+}
+
+#isMonthlyPaymentInRange {
+  align-self: center;
+}

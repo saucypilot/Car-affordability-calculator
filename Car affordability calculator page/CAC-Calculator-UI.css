@@ -1,33 +1,10 @@
-.calculator {
-  width: 50;
-  display: grid;
-  align-self: center;
-  margin-bottom: 5%;
-  gap: 1em; /* Add a 1em gap between grid items */
-}
 
-@media screen and (max-width: 800px) {
-  .calculator {
-    grid-template-columns: 100%;
-  }
-  .background-image {
-    position: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    filter: blur(3px);
-  }
-}
-
-/*
-  --------------------
-  questions section
-  */
 #question-wrapper {
   display: grid;
   border-radius: 0.5em;
-  gap: 1em; /* Add a 1em gap between grid items */
+  gap: 1em;
+  width: 50%;
+  background-color: rgba(240, 237, 232, 0.7);
 }
 
 #question-wrapper h2 {
@@ -42,7 +19,6 @@
 }
 
 .question {
-  border-radius: 0.5em;
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -54,6 +30,14 @@
 
 .question div {
   background-color: #9da2ae;
+}
+
+label {
+  margin-bottom: 0.5em;
+}
+
+input{
+  border-radius: 0.5em;
 }
 
 /*
@@ -86,39 +70,4 @@
   border: 1px solid grey;
   border-radius: 0.5em;
   cursor: pointer;
-}
-
-/* 
-  --------------------
-  output section
-  */
-#output {
-  display: none; /* Turns into grid when user completes the input */
-  background-color: rgb(164, 163, 161, 70%);
-  padding: 1em;
-  border: 1px solid grey;
-  align-content: flex-start;
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-}
-
-#output h2 {
-  padding: 1em 1em 1em 1em;
-  text-align: center;
-}
-
-.results {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 1em;
-  margin-bottom: 1em;
-  padding: 1em;
-}
-
-.isMonthlyPaymentInRange {
-  display: none;
-}
-
-#isMonthlyPaymentInRange {
-  align-self: center;
 }

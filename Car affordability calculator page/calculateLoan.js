@@ -74,10 +74,6 @@ export async function handleCalculation() {
     } else {
       isMonthlyPaymentInRange.innerHTML = "Looks like you can afford this car. Congratulations!";
     }
-
-    // Show the output section and hide the question form
-    document.getElementById("question-wrapper").replaceWith(document.getElementById("output"));
-    document.getElementById("output").style.display = "grid";
   } catch (error) {
     customAlert('Could not fetch inflation data: ' + error.message);
   }

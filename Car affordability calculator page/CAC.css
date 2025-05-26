@@ -32,6 +32,40 @@ body {
   filter: blur(3px);
   opacity: 0.3;
 }
+
+/*
+----------------------------
+Calculator UI
+----------------------------
+*/
+
+.calculator {
+  width: 50;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: flex-start;
+  margin-bottom: 5%;
+  justify-content: space-between;
+  gap: 1em; /* Add a 1em gap between grid items */
+}
+
+@media screen and (max-width: 800px) {
+  .calculator {
+    grid-template-columns: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .background-image {
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(3px);
+  }
+}
+
 /*
 ----------------------------
 Alert element
